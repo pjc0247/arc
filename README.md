@@ -28,7 +28,7 @@ auto rows = arc::model::begin("account")
   .all();
 ```
 ```C++
-auto rows = arc::model::begin("account")
+auto posts = some_account
   .n("post")
     .all();
 ```
