@@ -42,7 +42,7 @@ auto author = post
 ```C++
 auto posts =
   arc::model::begin("post")
-    .like("title", "%hello%")
+    .like("title", "%%hello%%")
       .all();
 ```
 
