@@ -2,7 +2,7 @@
 
 ActiveRecord on C++
 
-모델 정의
+모델간 관계 정의
 ----
 ```C++
 arc::model ("account")
@@ -39,6 +39,14 @@ auto post =
 auto author = post
   .o("account");
 ```
+```C++
+auto posts =
+  arc::model::begin("post")
+    .like("title", "%hello%")
+      .all();
+```
 
 
-* [choco::orm](https://github.com/pjc0247/choco_for_nnext/tree/master/src/choco_2/choco/orm)
+기타
+----
+[choco::orm](https://github.com/pjc0247/choco_for_nnext/tree/master/src/choco_2/choco/orm)
